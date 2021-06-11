@@ -1,7 +1,11 @@
-<div class="container">
+<div class="container min-vh-100">
 
   <h1>#<%= @chatroom.name %></h1>
-  <div id="messages" data-chatroom-id="<%= @chatroom.id %>" data-current-user-id="<%= current_user.id %>">
+  <div id="messages" 
+       class='overflow-auto' 
+       data-chatroom-id="<%= @chatroom.id %>" 
+       data-current-user-id="<%= current_user.id %>"
+       style='height: 80vh;'>
     <% @chatroom.messages.each do |message| %>
     
       <% if message.user == current_user %>
@@ -13,8 +17,12 @@
     <% end %>
   </div>
 
+
   <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
-    <%= f.input :content, label: false, placeholder: "What's in your mind right now?" %>
+    <%= f.input :content, 
+                label: false, 
+                placeholder: "O que você quer dizer para a SoSo agora?",
+                autofocus: true %>
   <% end %>
 
 
