@@ -18,9 +18,9 @@ puts " _____.,-#%&$@%#&#~,._____      - -"
 puts "Create Chatrooms"
 Chatroom.create! name: "SoSo Zap"
 
-puts "Create Users"
-User.create! email: "player@one.com", nickname: "Player One", password: '123456'
-User.create! email: "player@two.com", nickname: "Player Two", password: '123456'
+# puts "Create Users"
+# User.create! email: "player@one.com", nickname: "Player One", password: '123456'
+# User.create! email: "player@two.com", nickname: "Player Two", password: '123456'
 
-puts "Create message"
-Message.create! user: User.first, chatroom: Chatroom.first, content: "Hello World!"
+# puts "Create message"
+# Message.create! user: User.first, chatroom: Chatroom.first, content: "Hello World!"
