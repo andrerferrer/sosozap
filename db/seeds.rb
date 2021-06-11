@@ -16,7 +16,7 @@ puts "          | ;  :|                |"
 puts " _____.,-#%&$@%#&#~,._____      - -"
 
 puts "Create Chatrooms"
-Chatroom.create! name: "general"
+Chatroom.create! name: "SoSo Zap"
 
 puts "Create Users"
 User.create! email: "player@one.com", nickname: "Player One", password: '123456'
