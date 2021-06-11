@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container card p-5" style="margin-top: 25vh">
+    <h1 class="text-center">
+        Bem-vinda ao SoSo Zap.
+        <br>
+        <%= link_to "Fale com a SoSo", chatroom_path(Chatroom.first), class: 'btn btn-primary' %>
+    </h1>
+</div>
