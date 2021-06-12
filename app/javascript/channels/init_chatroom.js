@@ -3,7 +3,7 @@ import consumer from "./consumer";
 
 const insertIntoDOM = (messageHTML, currentUserId, messages) => {
   // create an empty div
-  const message = document.createElement('div') // https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement
+  const message = document.createElement('div'); // https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement
 
   // put the message HTML inside
   message.innerHTML = messageHTML;
@@ -38,7 +38,7 @@ const initChatroom = () => {
         // when you receive something
         received(messageHTML) {
           // update the DOM
-          console.log(messageHTML)
+          console.log(messageHTML);
           insertIntoDOM(messageHTML, currentUserId, messages);
         }
       }
