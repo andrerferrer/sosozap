@@ -2,6 +2,11 @@
     <h1 class="text-center">
         Bem-vinda ao SoSo Zap.
         <br>
-        <%= link_to "Fale com a SoSo", chatroom_path(Chatroom.first), class: 'btn btn-primary' %>
+        <%= link_to "Fale com a SoSo", 
+                    chatroom_path(
+                        @chatroom_id, 
+                        anchor: "message-#{@last_message_id}"
+                    ), 
+                    class: 'btn btn-primary' %>
     </h1>
 </div>
