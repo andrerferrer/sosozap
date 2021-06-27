@@ -1,7 +1,7 @@
 <div class="<%= local_assigns[:css_class] %> card my-3 p-3 w-50" id="message-<%= message.id %>" data-sender-id="<%= message.user.id %>">
   <i class="text-right">
     <span><%= message.user.nickname %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+    <small><%= message.created_at.in_time_zone("America/Sao_Paulo").strftime("%a %b %e at %l:%M%p") %></small>
   </i>
   <p><%= message.content %></p>
 </div>
